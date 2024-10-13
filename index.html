@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<style> 
+    body {
+        background-color: black;
+    }
+
+    .container {
+        background-color: white;
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 1rem;
+        font-size: large;
+    }
+
+    .header,
+    .input-task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.55rem;
+    }
+
+    .header h1 {
+        color: orangered;
+    }
+
+    .input-task input {
+        width: 100%;
+    }
+
+    .input-task button {
+        width: 100px;
+        margin-left: 16px;
+    }
+
+    .card {
+        background-color: green;
+        border-radius: 8px;
+        padding: 1px;
+        padding-left: 10px;
+        color: white;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, Sideth</h1> 
+        <div class="header">
+        
+        <h1>Check out what you need TO DO </h1>
+        <input type="color" id="theme-color">
+    </div>
+
+    <div class="input-task">
+        <input id="input-new-task" placeholder="enter task here">
+        <button type="submit">Add task</button>
+
+    </div>
+    <hr>
+
+    <div id="card-list">
+        
+    </div>
+</div>
+
+<script>
+
+    let tasks= [{
+        id: 0,
+        title: "Task 1",
+        completed: true,
+        isdeleted: true,
+        },
+        {
+        id: 1,
+        title: "Task 2",
+        completed: false,
+        isdeleted: false,
+        },
+        ];
+    
+    function renderTodolist(){
+        let todocontainer =document.getElementById("card-list");
+        todocontainer.innerHTML="";
+    
+   tasks
+   .filter((item) => item.completed === false && item.isdeleted === false)
+    .forEach((todo.index)=> {
+        todocontainer.innerHTML += 
+        <div class="card">
+            <p>${todo.title}</p>
+            <div>
+                <span 
+                id="completed-task-${todo.id}"
+                class="material-symbols-outlined">
+                    done_outline
+                    </span>
+                <span 
+                id = "removed-task-${todo.id}"
+                 class="material-symbols-outlined">close</span>
+            </div>
+        </div>
+    })
+    ;}
+
+    function addtask() {
+        let inputElement = document.getElementById("input-new-task");
+        console.log(inputElement.value)
+        let newId = task.length
+        task.push (
+            {
+                id: newId,
+                title: inputElement.value,
+                completed: false,
+                isdeleted: false,
+            }
+        )
+        inputElement.value=""
+        localStorage.setItem("task", JSON.stringify(tasks));
+        renderTodolist()
+    }
+
+    function completedTask (id){
+        console.log(id);
+        tasks[id].completed = true
+        console.log(tasks)
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+        renderTodolist()
+
+    }
+
+    function removedTask(id){
+        task[id].isdeleted = true
+        console.log(tasks)
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        renderTodolist()
+    }
+
+    function ChangeThemeColor(){
+        let color = document.getElementById("theme.color").value;
+        document.body.style.backgroundColor = color;
+        sessionStorage.setItem("theme-color", color);
+    }
+    renderTodolist()
+
+    
+</script>
+    
+</body>
+</html>
