@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="top-menu">
+        <img id="profilepict" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgtmS_THpd3b4YgklDGLB5rg66788rRKk97sNee5YoiAwL4JoiPq_IHcgkIrr8CpgNdIY&usqp=CAU" alt="profile-avatar">
+        <p class="menutitle">Bao Bao's Space</p>
+        <button class="logoutbutton">Logout</button>    
+    </div>
+    
+<div class="grid"> 
+    <div class="addtaskcard">
+        <p id="addtaskcardtitle">Note down your task here</p> <br>
+        <label for="" class="addtasklabel">What do you need to achieve?</label><br>
+        <input id="inputone" class="inputtasktext" type="text" placeholder="  enter text here"></input> <br>
+
+        <label for="" class="addtasklabel">Priority level</label><br>
+        <input class="inputtasktext" type="text" placeholder="  enter text here"></input> <br>
+
+        <label for="" class="addtasklabel">Start date</label><br>
+        <input class="inputtasktext" type="text" placeholder="  enter date here"></input> <br>
+
+        <label for="" class="addtasklabel">End date</label><br>
+        <input class="inputtasktext" type="text" placeholder="  enter date here"></input> <br>
+
+        <button id="submittask" type="submit" onclick="addtask()">Add task</button>
+    </div>
+
+    <div class="addtaskcard">
+
+        <div id="listdisplay">
+        <button id="search">search</button>
+        <p>Your to-do list</p>
+        <p>Completed Task</p>
+        <ol id="tasklist">
+            <li> <span>Go to market for grocery shopping</span> <span>testing</span></li>
+            <li>Two</li>
+        </ol>
+        <div id="todolist"></div>
+    </div>
+
+    
+</div>
+
+
+<script src="JavaScript.js"></script>
+
+    
+</body>
+</html>

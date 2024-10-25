@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+ font-family: "Noto San", sans-serif;
+ margin: 0;
+ background-image: url('asset/mainimg.svg');
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+
+.top-menu {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: #c2e1fd;
+ padding: 10px 20px;
+ height: 80px;
+}
+
+#profilepict {
+ width: 70px;
+ height: auto;
+ border-radius: 50%;
+ margin-right: 10px;
+ margin-left: 30px;
+}
+
+.menutitle {
+ font-size: 20px;
+ flex-grow: 1;
+ text-align: left;
+ font-weight: bold;
+
+}
+
+.logoutbutton {
+ font-size: 15px;
+ text-decoration: underline;
+ border: none;
+ background: none;
+}
+
+.inputtasktext {
+ width: 90%;
+ height: 30px;
+ background-color: white;
+ color: grey;
+ font-weight: lighter;
+ border-radius: 7px;
+ display: block;
+ margin: 10px;
+ border: 1px solid grey;
+ box-shadow: black;
+
+}
+
+#addtaskcardtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4E8BC4;
+    margin: 10px;
+}
+
+.addtasklabel {
+ font-size: 14px;
+ margin: 10px;
+}
+
+.addtaskcard {
+ border: none solid grey;
+ border-radius: 15px;
+ padding: 20px;
+ margin: 20px;
+ height: auto;
+ border-color: grey;
+ background-color: white;
+ overflow: hidden;
+ box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+ width: 500px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+#submittask {
+ border-radius: 20px;
+ padding: 5px;
+ width: 80px;
+ background-color: #033359;
+ color: white;
+ margin: 10px;
+}
+
+#search {
+ color: #8F959A;
+ background-color: white;
+ border-color: black;
+ width: 50%;
+ height: 35px;
+ border-radius: 30px;
+}
+
+.footer { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+    align-items: center;
+}
